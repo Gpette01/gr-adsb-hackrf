@@ -30,7 +30,7 @@ This repository is a modified version of [mhostetter/gr-adsb](https://github.com
    
    Using the flowgraph located in `/gnuradio/gr-adsb/examples/adsb_rx.grc` remove the ursp module and add the osmocom modules so it should look like something like this:
    
-   <img title="" src="https://github.com/Gpette01/gr-adsb-hackrf/tree/main/images/Flowchart.png" alt="">
+   <img title="" src="https://github.com/Gpette01/gr-adsb-hackrf/blob/main/images/Flowchart" alt="">
 
 ## Customization
 
