@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is a modified version of [mhostetter/gr-adsb](https://github.com/mhostetter/gr-adsb). The original project uses a USRP device for ADS-B signal reception and decoding. This modified version uses a HackRF device with the Osmocom module in GNU Radio and includes a customized `decoder.py` script to meet specific printing needs.
+This reposiroty is an ADS-B reader using GnuRadio and hackrf device
 
 ## Features
 
