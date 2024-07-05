@@ -26,29 +26,26 @@ This repository is a modified version of [mhostetter/gr-adsb](https://github.com
 
 ## Usage
 
-1. **Modify the GNU Radio flowgraph:**
+1. ## **Modify the GNU Radio flowgraph:**
+
+Using the flowgraph located in `/gnuradio/gr-adsb/examples/adsb_rx.grc` remove the ursp module and add the osmocom modules so it should look like something like this:
+
+<img title="" src="https://github.com/Gpette01/gr-adsb-hackrf/blob/main/images/Flowchart" alt="">
+
+if you try to start the flowchart now everything should open up correctly but the hackrf might not be reading any data. This issue should be fixed if you change the `IF` and `BB` gain to `40dB` in the `osmocom Source` block. Also a good idea is to set the `gain` which for now is located in the `QT GUI Entry` to `100dB`or `125dB`. If you see overflow(The letter o spammed in the terminal) you can try changing the osmocom `Source sync to PC Clock` **if your hackrf has a clock**, and most importantly raise the `Detection Threshold` in the `QT GUI Entry`, i found `0.05` a good value just bear in mind that overflow will not dissapear.
+
+
+
+2. **Remove GUI(If needed)**
    
-   Using the flowgraph located in `/gnuradio/gr-adsb/examples/adsb_rx.grc` remove the ursp module and add the osmocom modules so it should look like something like this:
+   If you want to remove the GUI and directly access the decoded data for some other use you can edit your flowchart to be like this:
    
-   <img title="" src="https://github.com/Gpette01/gr-adsb-hackrf/blob/main/images/Flowchart" alt="">
+   <img src="https://github.com/Gpette01/gr-adsb-hackrf/tree/main/images/Flowchart2">
 
-## Customization
+    When you run the flowchart now once, in the examples directory a python file named `adsb_rx.py` will be generated that will allow you to run the flowchart without the gnuradio-companion you still need the dependecies though.
 
-- **Decoder Script (`decoder.py`):**
-  
-  The `decoder.py` script has been modified to customize the output format of the decoded ADS-B messages. You can further modify this script to suit your specific needs.
+In the `ADS-B decoder module` you can change the `Print Level` to verbose so you can manage the data printed. To actually access the data, you have to open the `decoder.py` file which is essentially the source code of the `ADS-B decoder module`. The file is located `~/usr/local/lib/python3.12/dist-packages/gnuradio/adsb/decoder.py`
 
-## Contributing
+The logging happens in the `self.log()` statements. Eg. `self.log("info", "Datetime", self.datetime)` which would print `[INFO] Datetime: TimeHere`. You can then find the `self.log()` statements in the multiple `if's (self.msg_filter == "All Messages" or self.msg_filter == "Extended Squitter Only")` since the `Message Filter` in the `ADS-B Decoder` is set to `Extended Squiiter Only` there you can do whatever you like with the data.
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Create a new Pull Request.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgements
