@@ -40,7 +40,7 @@ if you try to start the flowchart now everything should open up correctly but th
    
    If you want to remove the GUI and directly access the decoded data for some other use you can edit your flowchart to be like this:
    
-   <img src="https://github.com/Gpette01/gr-adsb-hackrf/tree/main/images/Flowchart2">
+   <img title="" src="https://github.com/Gpette01/gr-adsb-hackrf/blob/main/images/Flowchart2" alt="">
 
     When you run the flowchart now once, in the examples directory a python file named `adsb_rx.py` will be generated that will allow you to run the flowchart without the gnuradio-companion you still need the dependecies though.
 
