@@ -22,7 +22,7 @@ This reposiroty is an ADS-B reader using GnuRadio and hackrf device
 
 2. **Module install:**
    
-   Install the [gr-adsb]([GitHub - mhostetter/gr-adsb: GNU Radio OOT module for demodulating and decoding ADS-B packets](https://github.com/mhostetter/gr-adsb)) and [gr-osmosdr]([GrOsmoSDR - gr-osmosdr - Open Source Mobile Communications](https://osmocom.org/projects/gr-osmosdr/wiki)) using the 2 linked repositories, and they should be placed as directed: If gnuradio is installed in `~/Directory1/gnuradio` then the modules should be `~/Directory1/gnuradio/gr-adsb`, `~/Directory1/gnuradio/gr-osmosdr`. In the gnuradio-companion you should see ADSB and Osmocom modules.
+   Install the [gr-adsb]([GitHub - mhostetter/gr-adsb: GNU Radio OOT module for demodulating and decoding ADS-B packets](https://github.com/mhostetter/gr-adsb)) and [gr-osmosdr]([GrOsmoSDR - gr-osmosdr - Open Source Mobile Communications](https://osmocom.org/projects/gr-osmosdr/wiki)) using the 2 linked repositories, and they should be placed as directed: If gnuradio is installed in `~/Directory1/gnuradio` then the modules should be `~/Directory1/gnuradio/gr-adsb`, `~/Directory1/gnuradio/gr-osmosdr`. In the gnuradio-companion you should see ADSB and Osmocom modules. Also install in the same way [this](https://github.com/ghostop14/gr-correctiq) module
 
 ## Usage
 
