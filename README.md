@@ -8,6 +8,8 @@ This reposiroty is an ADS-B reader using GnuRadio and hackrf device
 
 - **HackRF Support**: Replaced USRP device with HackRF for receiving ADS-B signals.
 - **Osmocom Module**: Utilizes the Osmocom module in GNU Radio for interfacing with HackRF.
+  **IMPORTANT:** When installing osmosdr in the command cmake ../ if you want to use hackrf do: cmake -DENABLE_HACKRF=ON .. && \
+  
 - **Customized Decoder**: Modified `decoder.py` script to customize the printing of decoded ADS-B messages.
 
 ## Requirements
